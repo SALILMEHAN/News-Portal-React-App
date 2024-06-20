@@ -49,7 +49,7 @@ function Navbar() {
                         </div>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-semibold">
                             <li onClick={handleworld}><a>World</a></li>
-                            <li onClick={() => fetchApiResponse('business')}><a>Sports</a></li>
+                            <li onClick={handlesports}><a>Sports</a></li>
                             <li onClick={handletech}><a>Technology</a></li>
                             <li onClick={handlebussiness}><a>Business</a></li>
                             <li onClick={handleenter}><a>Entertainment</a></li>
