@@ -8,12 +8,12 @@ function Pagination() {
     const { page, limit } = useSelector(store => store.pagination);
     const { resp } = useSelector(store => store.apiobj);
 
-    const handlePrev = () => {
+    const handlePrev = () => {  // Previous Button
         if (page > 1) {
             dispatch(null_resp_for_page());
             dispatch(getresp_for_page({ start: (page - 2) * 10, end: (page - 1) * 10 }));
             dispatch(prevPage());
-            window.scrollTo({
+            window.scrollTo({       //Smooth Scrolling
                 top: 0,
                 left: 0,
                 behavior: "smooth"
@@ -21,7 +21,7 @@ function Pagination() {
         }
     }
 
-    const handleNext = () => {
+    const handleNext = () => {  // Next Button
         function find_end(st) {
             if (resp.length < (st + 10)) {
                 return 'ALL';
@@ -32,7 +32,7 @@ function Pagination() {
             dispatch(null_resp_for_page());
             dispatch(getresp_for_page({ start: (page) * 10, end: find_end((page) * 10) }));
             dispatch(nextPage());
-            window.scrollTo({
+            window.scrollTo({       // Smooth Scrolling
                 top: 0,
                 left: 0,
                 behavior: "smooth"

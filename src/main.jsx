@@ -8,7 +8,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import NewsArea from './Components/NewsArea.jsx'
 import NewsPage from './Components/NewsPage.jsx'
 
-const router = createBrowserRouter([
+const router = createBrowserRouter([    // Routes
   {
     path: "/",
     element: <App />,

@@ -9,10 +9,12 @@ function fetchApiResponse(topic) {
     useEffect(()=>{
         (async () => {
             try {                
+                // API Calling
                 const res = await fetch(`https://newsapi.org/v2/everything?q=${topic}&from=2024-06-18&to=2024-06-18&sortBy=popularity&apiKey=6e5b111406984a3ba7ebc4496c3e4077`, {
                     method: 'GET'
                 });
                 const data = await res.json();
+                // Filtering Out The Null Data
                 const d=[];
 
                 for(let i=0;i<data.articles.length;i++){

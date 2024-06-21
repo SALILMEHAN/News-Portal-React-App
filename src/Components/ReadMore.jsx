@@ -1,13 +1,15 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
+// Modal Card
+
 function ReadMore({ data, p }) {
     const navigate = useNavigate();
     const modalId = `modal_${data.title}`;
 
     const handle_go_to_page = () => {
         navigate(`/article/${p}`)
-        window.scrollTo({
+        window.scrollTo({       //Smooth Scrolling
             top: 0,
             left: 0,
             behavior: "smooth"

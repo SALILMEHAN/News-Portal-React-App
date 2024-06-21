@@ -16,6 +16,7 @@ function NewsArea({ type }) {
                         ? resp_for_page?.map((item, key) => {
                             return (
                                 <>
+                                    {/* Displaying all the News Blocks of current Page */}
                                     <NewsBlock item={item} key={key} p={key} />
                                 </>
                             )
