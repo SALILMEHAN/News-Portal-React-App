@@ -10,7 +10,7 @@ function fetchApiResponse(topic) {
         (async () => {
             try {                
                 // API Calling
-                const res = await fetch(`https://newsapi.org/v2/everything?q=${topic}&from=2024-06-18&to=2024-06-18&sortBy=popularity&apiKey=6e5b111406984a3ba7ebc4496c3e4077`, {
+                const res = await fetch(`https://newsapi.org/v2/everything?q=${topic}&from=2024-09-07&to=2024-09-07&sortBy=popularity&apiKey=6e5b111406984a3ba7ebc4496c3e4077`, {
                     method: 'GET'
                 });
                 const data = await res.json();
