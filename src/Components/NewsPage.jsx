@@ -25,7 +25,7 @@ const NewsPage = () => {
                 <br />
                 <p>{data.content || '[NOT GIVEN]'}</p>
                 <br />
-                <p><a href={data.url} className='text-blue-700'>Click Here to go to External Link</a></p>
+                <p><a href={data.url} className='text-blue-700' target='_blank'>Click Here to go to External Link</a></p>
             </article>
         </div>
     );
